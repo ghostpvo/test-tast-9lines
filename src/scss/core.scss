@@ -1,0 +1,11 @@
+// Project core SCSS includes
+@import 'common/_reset';
+@import 'common/_fonts';
+
+@import 'variables/_colors';
+
+@import 'mixins/_mixins';
+
+@import 'vendor/_foundation';
+
+@import 'blocks';

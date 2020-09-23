@@ -1,0 +1,91 @@
+.js-knowledge {
+	position: relative;
+	padding: 30px 20px 18px;
+
+	&__arrow-graph {
+		position: relative;
+		display: block;
+		width: 253px;
+		height: 126px;
+		@include svg(-189px, -7px);
+	}
+
+	&__arrow {
+		position: absolute;
+		left: 50%;
+		bottom: 0;
+		width: 110px;
+		height: 20px;
+		margin-left: -55px;
+		margin-bottom: -8px;
+		@include transition(all 2s cubic-bezier(0, 1.5, 0.75, 1));
+
+		&:before {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 65px;
+			height: 100%;
+			content: "";
+			@include svg(-26px, -185px);
+		}
+	}
+
+	&__number {
+		position: relative;
+		display: block;
+		height: 61px;
+		margin-top: 25px;
+		font-weight: 900;
+		font-size: 50px;
+		color: $blue;
+
+		span {
+			position: absolute;
+			left: 0;
+			top: 0;
+			background: #fff;
+			opacity: 0;
+
+			&:nth-child(1) {
+				opacity: 1;
+			}
+
+			&:nth-child(2) {
+				@include transition(opacity .25s linear .25s);
+			}
+
+			&:nth-child(3) {
+				@include transition(opacity .25s linear .5s);
+			}
+
+			&:nth-child(4) {
+				@include transition(opacity .25s linear .75s);
+			}
+
+			&:nth-child(5) {
+				@include transition(opacity .25s linear 1s);
+			}
+
+			&:nth-child(6) {
+				@include transition(opacity .25s linear 1.25s);
+			}
+
+			&:nth-child(7) {
+				@include transition(opacity .25s linear 1.5s);
+			}
+
+			&:nth-child(8) {
+				@include transition(opacity .25s linear 1.75s);
+			}
+
+			&:nth-child(9) {
+				@include transition(opacity .25s linear 2s);
+			}
+
+			&.js-knowledge__dynamic-num {
+				opacity: 1;
+			}
+		}
+	}
+}

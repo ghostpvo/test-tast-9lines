@@ -1,0 +1,48 @@
+.custom-checkbox {
+	input {
+		display: none;
+
+		&:checked {
+			+ label {
+				&:before {
+					background-color: $blue;
+				}
+
+				&:after {
+					position: absolute;
+					top: 50%;
+					left: 3px;
+					width: 13px;
+					height: 10px;
+					margin-top: -6px;
+					content: "";
+					@include svg(-4px, -178px);
+				}
+			}
+		}
+	}
+
+	label {
+		position: relative;
+		display: inline-block;
+		padding: 18px 0 18px 26px;
+		margin: 0;
+		color: #666;
+		font-size: 12px;
+		font-weight: 500;
+		text-transform: uppercase;
+
+		&:before {
+			position: absolute;
+			top: 50%;
+			left: 0;
+			content: "";
+			width: 19px;
+			height: 19px;
+			margin-top: -10px;
+			background-color: #EFEFEF;
+			border-radius: 4px;
+			transition: all .3s ease;
+		}
+	}
+}
